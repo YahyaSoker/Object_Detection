@@ -16,7 +16,12 @@ A collection of object detection and image classification projects using deep le
 
 ## Overview
 
-This repository contains multiple object detection and image classification projects. Each project focuses on detecting or classifying specific objects or categories in images using state-of-the-art deep learning models.
+This repository contains multiple computer vision projects including object detection, image classification, and facial emotion recognition. Each project focuses on detecting or classifying specific objects or categories in images using state-of-the-art deep learning models.
+
+**Project Types**:
+- **Image Classification**: Categorizing entire images (e.g., Mushroom Type Prediction, Emotion Detection)
+- **Object Detection**: Locating and identifying multiple objects in images (future projects)
+- **Facial Analysis**: Recognizing emotions and facial features (Emotion Detection)
 
 ### What is Object Detection?
 
@@ -42,6 +47,21 @@ Object_Detection/
 │   │   └── mushroom.pt
 │   └── images/                        # Input images folder
 │
+├── Emotion_Detection/                 # Facial emotion recognition project
+│   ├── predict.py                     # Prediction script
+│   ├── train.py                       # Training script
+│   ├── evaluate_model.py              # Model evaluation script
+│   ├── prepare_data.py                # Data preparation utility
+│   ├── prepare_kaggle.py              # Kaggle dataset preparation
+│   ├── requirements.txt               # Project dependencies
+│   ├── models/                        # Trained model files
+│   │   └── emotion_model_best.pth
+│   ├── Data/                          # Dataset folder
+│   │   ├── train/                     # Training images
+│   │   ├── valid/                     # Validation images
+│   │   └── test/                      # Test images
+│   └── results/                       # Evaluation results and plots
+│
 └── [Future Projects]/                 # Additional projects will be added here
 ```
 
@@ -64,6 +84,48 @@ Object_Detection/
 
 ---
 
+### 2. Emotion Detection
+
+**Type**: Facial Emotion Recognition / Image Classification  
+**Model**: ResNet50 (PyTorch)  
+**Purpose**: Detect and classify facial emotions from images
+
+- **Location**: `Emotion_Detection/`
+- **Model File**: `models/emotion_model_best.pth`
+- **Emotion Classes**: Angry, Fear, Happy, Sad, Surprise
+
+**Features**:
+- Single image emotion prediction with confidence scores
+- Complete training pipeline with data augmentation
+- Model evaluation with confusion matrix and classification reports
+- Data preparation utilities for organizing datasets
+- Visualization of results and performance metrics
+
+**Scripts**:
+- `predict.py`: Predict emotion from a single image
+- `train.py`: Train the ResNet50 model on emotion dataset
+- `evaluate_model.py`: Evaluate model performance on test set
+- `prepare_data.py`: Prepare and organize dataset structure
+- `prepare_kaggle.py`: Prepare Kaggle datasets for training
+
+**Usage**:
+```bash
+cd Emotion_Detection
+# Install dependencies
+pip install -r requirements.txt
+
+# Train model
+python train.py
+
+# Predict emotion from image
+python predict.py path/to/image.jpg
+
+# Evaluate model
+python evaluate_model.py
+```
+
+---
+
 *More projects will be added here as they are developed*
 
 ## Getting Started
@@ -82,12 +144,18 @@ git clone <repository-url>
 cd Object_Detection
 ```
 
-2. Install required dependencies:
+2. Install core dependencies:
 ```bash
+# For YOLO-based projects (Mushroom Type Prediction)
 pip install ultralytics
+
+# For PyTorch-based projects (Emotion Detection)
+pip install torch torchvision
 ```
 
-For specific projects, additional dependencies may be required. Check individual project README files for details.
+**Note**: Each project may have specific requirements. Check individual project folders for `requirements.txt` files:
+- `Mushroom_Type_Prediction/`: Uses Ultralytics YOLO
+- `Emotion_Detection/`: Uses PyTorch, ResNet50 - see `requirements.txt`
 
 ## Object Detection Concepts
 
@@ -127,14 +195,17 @@ YOLO is a popular real-time object detection system that processes entire images
 
 ### Other Models
 
+- **ResNet**: Deep residual networks for image classification (used in Emotion Detection)
 - **R-CNN Family**: Region-based CNN models (slower but more accurate)
 - **SSD**: Single Shot Detector (balance between speed and accuracy)
 - **RetinaNet**: Feature pyramid network for detection
+- **CNN Architectures**: Various convolutional neural networks for classification tasks
 
 ## Requirements
 
 ### Core Dependencies
 
+**YOLO Projects** (Mushroom Type Prediction):
 ```txt
 ultralytics>=8.0.0
 torch>=1.8.0
@@ -142,6 +213,20 @@ torchvision>=0.9.0
 opencv-python>=4.6.0
 pillow>=7.1.2
 numpy>=1.23.0
+```
+
+**PyTorch Projects** (Emotion Detection):
+```txt
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.25.2,<2.0.0
+pillow>=9.0.0
+matplotlib>=3.5.0
+scikit-learn>=1.0.0
+pandas>=1.3.0
+seaborn>=0.11.0
+scipy>=1.10.0
+tqdm>=4.65.0
 ```
 
 ### Optional Dependencies
@@ -170,12 +255,23 @@ python main.py
 3. **Run Inference**: Process images and get predictions
 4. **View Results**: Check console output or saved result files
 
-### Example: Mushroom Classification
+### Examples
 
+**Mushroom Classification**:
 ```bash
 cd Mushroom_Type_Prediction
 # Add images to the images/ folder
 python main.py
+```
+
+**Emotion Detection**:
+```bash
+cd Emotion_Detection
+# Predict emotion from an image
+python predict.py path/to/image.jpg
+
+# Or train a new model
+python train.py
 ```
 
 ## Adding New Projects
