@@ -374,6 +374,6 @@ When contributing:
 
 ---
 
-**Last Updated**: [Current Date]  
-**Maintained by**: [Your Name/Team]
+**Last Updated**: 10-12-2025
+**Maintained by**: Yahya
 
