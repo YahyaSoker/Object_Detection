@@ -357,10 +357,6 @@ When contributing:
 4. Test with sample images
 5. Update this README with new projects
 
-## License
-
-[Specify your license here]
-
 ## Acknowledgments
 
 - [Ultralytics](https://ultralytics.com) for YOLO framework
