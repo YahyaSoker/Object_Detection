@@ -1,0 +1,58 @@
+================================================================================
+MUSHROOM TYPE PREDICTION - DATASET STATISTICS
+================================================================================
+
+Total Training Samples: 689,520
+Total Validation Samples: 689,520
+Total Test Samples: 15,614
+Total Samples: 1,394,654
+
+Unique Classes in Training: 169
+Unique Classes in Validation: 169
+Unique Classes in Test: 169
+Total Unique Classes: 169
+
+Class Distribution Statistics:
+--------------------------------------------------------------------------------
+Training - Min samples per class: 4080
+Training - Max samples per class: 4080
+Training - Mean samples per class: 4080.00
+Training - Median samples per class: 4080.00
+
+Validation - Min samples per class: 4080
+Validation - Max samples per class: 4080
+Validation - Mean samples per class: 4080.00
+Validation - Median samples per class: 4080.00
+
+Test - Min samples per class: 32
+Test - Max samples per class: 874
+Test - Mean samples per class: 92.39
+Test - Median samples per class: 49.00
+
+Top 10 Classes by Total Samples:
+--------------------------------------------------------------------------------
+ 1. Xanthoria parietina                       9,034 samples
+ 2. Fomes fomentarius                         8,947 samples
+ 3. Fomitopsis pinicola                       8,924 samples
+ 4. Amanita muscaria                          8,847 samples
+ 5. Parmelia sulcata                          8,556 samples
+ 6. Laetiporus sulphureus                     8,549 samples
+ 7. Hypogymnia physodes                       8,484 samples
+ 8. Cerioporus squamosus                      8,475 samples
+ 9. Leccinum scabrum                          8,414 samples
+10. Coprinus comatus                          8,402 samples
+
+Bottom 10 Classes by Total Samples:
+--------------------------------------------------------------------------------
+ 1. Psilocybe caerulescens                    8,192 samples
+ 2. Panaeolus papilionaceus                   8,193 samples
+ 3. Chlorophyllum molybdites                  8,195 samples
+ 4. Cryptoporus volvatus                      8,195 samples
+ 5. Galerina marginata                        8,195 samples
+ 6. Laccaria ochropurpurea                    8,195 samples
+ 7. Volvopluteus gloiocephalus                8,195 samples
+ 8. Coprinopsis lagopus                       8,196 samples
+ 9. Gymnopilus luteofolius                    8,196 samples
+10. Psathyrella candolleana                   8,196 samples
+
+================================================================================
