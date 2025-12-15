@@ -1,0 +1,18 @@
+path: /nfs/home/zhangsonglin/Xray_Prohibited_prediction/Yolov8_Xray/ultralytics/datasets/SPXray
+train: /kaggle/input/x-ray-contraband-detection-dataset/data/images/train
+val: /kaggle/input/x-ray-contraband-detection-dataset/data/images/val
+test: /kaggle/input/x-ray-contraband-detection-dataset/data/images/test
+nc: 12
+names:
+- Baton
+- Plier
+- Hammer
+- Powerbank
+- Scissors
+- Wrench
+- Gun
+- Bullet
+- Sprayer
+- HandCuffs
+- Knife
+- Lighter
