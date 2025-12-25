@@ -1,0 +1,7 @@
+names:
+- person
+- weapon
+nc: 2
+path: /kaggle/working/data
+train: train/images
+val: val/images
